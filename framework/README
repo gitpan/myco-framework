@@ -1,0 +1,85 @@
+
+  myco
+
+
+README
+
+$Id: README,v 1.3 2003/12/19 21:36:45 sommerb Exp $
+
+
+* Welcome to myco and The myco Project!
+
+The purpose of The myco Project is to create and sustain a full-fledged,
+open-source ERP (Enterprise Resource Planning) system.  The initial target
+"customer" is colleges and universities, though every attempt is to be
+made to construct system features in a more generally applicable fashion.
+
+Building an ERP system is a tall order, to put it mildly.  As soon
+as we have established a stable framework with some usable functionality
+we will create an open-source distribution and announce our existence as
+an open project.  It is our belief that many institutions could benefit
+from an open-source ERP;  if our initial offering is technically
+sound and actually useful then it seems reasonable to expect that a
+community of contributors will form with the intent to move the product
+more fully toward being a complete ERP.
+
+The initial phase of development is focused on producing a deployable
+system capable of automating college marketing and admissions functions.
+This work is being sponsored by Eastern Nazarene College (http://www.enc.edu).
+In support of these functions is emerging an application framework and a core
+object model that are being constructed with objectives of coherency and
+extensibility firmly in mind. 
+
+The name 'myco', by the way, loosely stands for "my company", and as such
+points to our full-scale ERP aspirations.  The name was arrived at with
+a minute or so of consideration.  Not terribly inspired, perhaps, but we've
+found it to be catchy.  :-)
+
+
+* Getting Started
+
+We're more than a bit lean on documentation at present.  Bits are beginning
+to appear under 'docs'.  'docs/INSTALL' is an obvious starting point.
+Newer classes now have POD documentation firmly embedded.  To access:
+
+	cd $MYCO_BASE/classes
+	perldoc CLASS
+
+Recommended initial reading:
+
+  Key framework base classes
+   * Myco::Base::Entity
+   * Myco::Test::EntityTest
+
+  Clean example of Entity class: (though not with much in the way of
+      interesting methods.  Older entity classes, which at the moment
+      means everything except Marketing::*, presently have no POD and
+      use older version of base classes that are due for retirement)
+   * Myco::Marketing::Tool
+   * Myco::Marketing::Tool::Test
+
+  Key 3rd-party components
+   * Perl - http://www.perl.com
+   * Tangram - http://soundobjectlogic.com
+   * Class::Tangram
+   * HTML::Mason - http://www.masonhq.com
+   * mod_perl - http://perl.apache.org
+   * PostgreSQL - http://www.postgresql.org
+
+
+* CVS access
+
+All access is via ssh.  You'll need a valid account, of course.  Usual
+setup details apply (eg. set environment variable CVS_ROOT to 'ssh').
+
+   Checkout:
+
+        cvs -d dev.its.enc.edu:/var/netg/cvsrep co myco
+
+
+* Thanks for your participation!
+
+
+Charles N. Owens,
+Senior Technology Officer
+Eastern Nazarene College
